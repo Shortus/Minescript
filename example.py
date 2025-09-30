@@ -57,5 +57,15 @@ def nig_on_bedrock() -> None:
         elif block_type == "minecraft:birch_leaves":
             break
 
+def zmazek_showcase() -> None:
+    #x, y, z = [math.floor(p) for p in player().position]
+    for i in range (5):
+        #minescript.player_look_at(x + i, y - i, z * i)
+        minescript.player_press_forward(True)
+        time.sleep(0.5)
+        minescript.player_press_forward(False)
+        time.sleep(0.5)
+    
 
-close_entities()
+
+zmazek_showcase()
