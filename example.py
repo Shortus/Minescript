@@ -37,14 +37,6 @@ def example() -> None:
     # Write a message to the chat that 
     echo(f"Created sign at {x} {y} {z} over {block_type}")
 
-def close_entities() -> None:
-    """Displays close entities from you."""
-    entity_count = {}
-    for entity in minescript.entities():
-        entity_count[entity.name] = entity_count.get(entity.name, 0) + 1
-    for entity in list(entity_count.items()):
-        echo(entity)
-
 def nig_on_bedrock() -> None:
     """Prints Nigga when on bedrock."""
     while True:
@@ -70,19 +62,6 @@ def spam_chat() -> None:
     """Spams chat x times with a message."""
     for i in range(10):
         minescript.chat("Nigga")
-
-def spin() -> None:
-    """Spins around."""
-    NUMBER_OF_SPINS = 10
-    SPIN_SPEED = 500
-    x, y = minescript.player_orientation()
-    echo(x, y)
-    for i in range(int((NUMBER_OF_SPINS * 360) / SPIN_SPEED) + 1):
-        minescript.player_set_orientation((x + (SPIN_SPEED * i)), y)
-    minescript.player_set_orientation((x + (NUMBER_OF_SPINS * 360)), y)
-
-
-
 
 
 
