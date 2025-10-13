@@ -63,12 +63,20 @@ def spam_chat() -> None:
     for i in range(10):
         minescript.chat("Nigga")
 
+def spam_crouch() -> None:
+    """Spams crouch infinitely."""
+    while True:
+        minescript.player_press_sprint(True)
+        #time.sleep(0.01)
+        minescript.player_press_sprint(False)
+        #time.sleep(0.01)
+
 
 
 def test() -> None:
     """Testing ground."""
-    
+    ...
     
 
 
-close_entities()
+spam_crouch()
