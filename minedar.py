@@ -15,7 +15,7 @@ def sort_closest(position_list: list) -> int:
     """Sorts the list from closest to farthest."""
     ...
  
-def radar(scope: int, block_name: str) -> None:
+def radar(block_name: str, scope: int = 4) -> None:
     """Searches for the inputed block in the inputed radius."""
     block_positions = []
     formatted_block_name = format_block_name(block_name)
@@ -56,8 +56,16 @@ def radar(scope: int, block_name: str) -> None:
         minescript.echo(position)
     minescript.echo("Done")
  
+
+def main() -> None:
+    """Runs the whole program."""
+    block_name = sys.argv[1]
+    try:
+        scope = int(sys.argv[2])
+    except:
+        minescript.echo("Would recommend entering a scope")
+    radar(block_name, scope)
+
  
 if __name__ == "__main__":
-    scope = int(sys.argv[1])
-    block_name = sys.argv[2]
-    radar(scope, block_name)
+    main()
